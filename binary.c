@@ -1,37 +1,37 @@
 #include <stdio.h>
 
-void read_array(int n, int arr[]);
-void binary_search(int arr[], int n, int key);
+void read_array(int, int[]);
+void search(int, int[], int);
 
 void main()
 {
-    int n, key;
+    int a, key;
+    printf("Enter the number of elements: ");
+    scanf("%d", &a);
     int arr[10];
 
-    printf("Enter the number of elements: ");
-    scanf("%d", &n);
-
-    read_array(n, arr);
+    read_array(a, arr);
 
     printf("Enter the key to be searched: ");
     scanf("%d", &key);
 
-    binary_search(arr, n, key);
+    search(a, arr, key);
 }
 
 void read_array(int n, int arr[])
 {
     int i;
-    printf("Enter the elements in sorted order:\n");
+    printf("Enter the elements in ascending order:\n");
     for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
 }
 
-void binary_search(int arr[], int n, int key)
+void search(int n, int arr[], int key)
 {
-    int begin = 0, end = n - 1, mid, found = 0;
+    int begin = 0, end = n - 1, mid;
+    int found = 0;
 
     while (begin <= end)
     {
@@ -53,6 +53,6 @@ void binary_search(int arr[], int n, int key)
         }
     }
 
-    if (found == 0)
-        printf("Key not found.\n");
+    if (!found)
+        printf("Key not found\n");
 }
