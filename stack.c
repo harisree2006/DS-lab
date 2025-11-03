@@ -18,7 +18,7 @@ void main()
 
     while (1)
     {
-        printf("\n--- STACK OPERATIONS USING ARRAY ---\n");
+        printf("\n STACK OPERATIONS USING ARRAY \n");
         printf("1. PUSH\n2. POP\n3. PEEK\n4. IS FULL\n5. IS EMPTY\n6. DISPLAY\n7. EXIT\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
